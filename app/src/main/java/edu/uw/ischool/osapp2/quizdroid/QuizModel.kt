@@ -17,7 +17,8 @@ val topics = listOf(
         questions = listOf(
             Question("What is 2 + 2?", listOf("3", "4", "5", "6"), 1),
             Question("What is 5 x 5?", listOf("20", "25", "30", "35"), 1),
-            Question("What is the square root of 64", listOf("6", "12", "7", "8"), 3)
+            Question("What is the square root of 64", listOf("6", "12", "7", "8"), 3),
+            Question("what is 5% of 50", listOf("5", "1", "2.5", "10"), 2)
         )
     ),
     Topic(
@@ -32,8 +33,10 @@ val topics = listOf(
         name = "Marvel Super Heroes",
         description = "How well do you know Marvel superheroes? (MCU)",
         questions = listOf(
-            Question("Who is Iron Man", listOf("Peter Parker", "Tony Stark", "Happy Hogan", "Stan Lee"), 1)
-        )
+            Question("Who is Iron Man", listOf("Peter Parker", "Tony Stark", "Happy Hogan", "Stan Lee"), 1),
+            Question("Who is the villain in Infinity War", listOf("Thanos", "Dr.Strange", "Green Goblin", "Mysterio"), 0),
+            Question("What planet is Thor from", listOf("Earth", "Titan", "Mars", "Asgard"), 3),
+            )
     )
 )
 
