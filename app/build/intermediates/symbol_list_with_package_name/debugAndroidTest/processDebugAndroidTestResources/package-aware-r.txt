@@ -1,0 +1,3 @@
+edu.uw.ischool.osapp2.quizdroid.test
+style WhiteBackgroundDialogTheme
+style WhiteBackgroundTheme

@@ -1,0 +1,5 @@
+edu.uw.ischool.osapp2.quizdroid.test.app-core-1.6.1-0 /Users/oliviasapp/.gradle/caches/transforms-4/96736f29a8c5a94f362b7bc4969770b5/transformed/core-1.6.1/res
+edu.uw.ischool.osapp2.quizdroid.test.app-androidTest-1 /Users/oliviasapp/Documents/UWClasses/info448/quizdroid/app/build/generated/res/resValues/androidTest/debug
+edu.uw.ischool.osapp2.quizdroid.test.app-mergeDebugAndroidTestResources-2 /Users/oliviasapp/Documents/UWClasses/info448/quizdroid/app/build/intermediates/incremental/debugAndroidTest/mergeDebugAndroidTestResources/merged.dir
+edu.uw.ischool.osapp2.quizdroid.test.app-mergeDebugAndroidTestResources-3 /Users/oliviasapp/Documents/UWClasses/info448/quizdroid/app/build/intermediates/incremental/debugAndroidTest/mergeDebugAndroidTestResources/stripped.dir
+edu.uw.ischool.osapp2.quizdroid.test.app-debugAndroidTest-4 /Users/oliviasapp/Documents/UWClasses/info448/quizdroid/app/build/intermediates/merged_res/debugAndroidTest/mergeDebugAndroidTestResources

@@ -1,0 +1,2 @@
+edu.uw.ischool.osapp2.quizdroid.test:style/WhiteBackgroundTheme = 0x7f010001
+edu.uw.ischool.osapp2.quizdroid.test:style/WhiteBackgroundDialogTheme = 0x7f010000

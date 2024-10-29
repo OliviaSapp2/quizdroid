@@ -1,12 +1,18 @@
 package edu.uw.ischool.osapp2.quizdroid
 
+import android.content.Intent
 import android.os.Bundle
+import android.widget.ArrayAdapter
+import android.widget.ListView
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
+import topics
 
 class MainActivity : AppCompatActivity() {
+    private lateinit var topicListView: ListView
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
@@ -15,6 +21,17 @@ class MainActivity : AppCompatActivity() {
             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
+        }
+
+        topicListView = findViewById(R.id.topic_list)
+
+        val adapter = ArrayAdapter(this, android.R.layout.simple_list_item_1, topics.map { it.name })
+        topicListView.adapter = adapter
+
+        topicListView.setOnItemClickListener { _, _, position, _ ->
+            val intent = Intent(this, TopicOverviewActivity::class.java)
+            intent.putExtra("topicIndex", position)
+            startActivity(intent)
         }
     }
 }
