@@ -3,6 +3,7 @@ package edu.uw.ischool.osapp2.quizdroid
 import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
+import android.widget.ImageView
 import android.widget.TextView
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
@@ -13,6 +14,7 @@ class TopicOverviewActivity : AppCompatActivity() {
     private lateinit var topicName: TextView
     private lateinit var topicDescriptionLong: TextView
     private lateinit var questionCount: TextView
+    private lateinit var icon: ImageView
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -27,6 +29,7 @@ class TopicOverviewActivity : AppCompatActivity() {
         topicName = findViewById(R.id.topic_name)
         topicDescriptionLong = findViewById(R.id.topic_description_long)
         questionCount = findViewById(R.id.question_count)
+        icon = findViewById(R.id.icon)
 
         val topicIndex = intent.getIntExtra("topicIndex", 0)
         val topic = (application as QuizApp).topicRepository.getTopics()[topicIndex]
@@ -34,6 +37,7 @@ class TopicOverviewActivity : AppCompatActivity() {
         topicName.text = topic.title
         topicDescriptionLong.text = topic.longDescription
         questionCount.text = "Total Questions: ${topic.questions.size}"
+        icon.setImageResource(topic.icon)
 
         findViewById<Button>(R.id.begin_button).setOnClickListener {
             val intent = Intent(this, QuestionActivity::class.java)

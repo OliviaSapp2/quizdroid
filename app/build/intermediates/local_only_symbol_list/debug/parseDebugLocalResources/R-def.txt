@@ -2,12 +2,16 @@ R_DEF: Internal format may change without notice
 local
 color black
 color white
+drawable bolt
+drawable calculate_icon
 drawable ic_launcher_background
 drawable ic_launcher_foreground
+drawable movie
 id begin_button
 id correct_answer
 id correct_count
 id finish_button
+id icon
 id main
 id next_button
 id options_group

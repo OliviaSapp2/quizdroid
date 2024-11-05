@@ -7,6 +7,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.BaseAdapter
+import android.widget.ImageView
 import android.widget.ListView
 import android.widget.TextView
 import androidx.activity.enableEdgeToEdge
@@ -53,10 +54,12 @@ class TopicAdapter(private val context: Context, private val topics: List<Topic>
 
         val titleTextView = view.findViewById<TextView>(R.id.title)
         val descriptionTextView = view.findViewById<TextView>(R.id.topic_short_description)
+        val iconImageView = view.findViewById<ImageView>(R.id.icon)
 
         val topic = getItem(position)
         titleTextView.text = topic.title
         descriptionTextView.text = topic.shortDescription
+        iconImageView.setImageResource(topic.icon)
 
         return view
     }

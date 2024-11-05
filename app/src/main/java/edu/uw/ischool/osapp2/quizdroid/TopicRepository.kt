@@ -1,5 +1,7 @@
 package edu.uw.ischool.osapp2.quizdroid
 
+import android.graphics.drawable.Icon
+
 interface TopicRepository {
     fun getTopics(): List<Topic>
 }
@@ -15,7 +17,8 @@ class InMemoryTopicRepository : TopicRepository {
                 Question("What is 5 x 5?", listOf("20", "25", "30", "35"), 1),
                 Question("What is the square root of 64", listOf("6", "12", "7", "8"), 3),
                 Question("what is 5% of 50", listOf("5", "1", "2.5", "10"), 2)
-            )
+            ),
+            icon = R.drawable.calculate_icon
         ),
         Topic(
             title = "Physics",
@@ -24,7 +27,8 @@ class InMemoryTopicRepository : TopicRepository {
             questions = listOf(
                 Question("What does mc^2 = ?", listOf("E", "velocity", "acceleration", "m^2c"), 0),
                 Question("What does acceleration = ?", listOf("change velocity/ change in time", "force / mass", "All of the above", "none of the above"), 2)
-            )
+            ),
+            icon = R.drawable.bolt
         ),
         Topic(
             title = "Marvel Super Heroes",
@@ -34,7 +38,8 @@ class InMemoryTopicRepository : TopicRepository {
                 Question("Who is Iron Man", listOf("Peter Parker", "Tony Stark", "Happy Hogan", "Stan Lee"), 1),
                 Question("Who is the villain in Infinity War", listOf("Thanos", "Dr.Strange", "Green Goblin", "Mysterio"), 0),
                 Question("What planet is Thor from", listOf("Earth", "Titan", "Mars", "Asgard"), 3),
-            )
+            ),
+            icon = R.drawable.movie
         )
     )
 
@@ -45,7 +50,8 @@ data class Topic(
     val title: String,
     val shortDescription: String,
     val longDescription: String,
-    val questions: List<Question>
+    val questions: List<Question>,
+    val icon: Int
 )
 
 data class Question(
