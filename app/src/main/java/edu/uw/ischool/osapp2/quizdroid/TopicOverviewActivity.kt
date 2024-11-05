@@ -8,11 +8,10 @@ import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
-import topics
 
 class TopicOverviewActivity : AppCompatActivity() {
     private lateinit var topicName: TextView
-    private lateinit var topicDescription: TextView
+    private lateinit var topicDescriptionLong: TextView
     private lateinit var questionCount: TextView
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -26,14 +25,14 @@ class TopicOverviewActivity : AppCompatActivity() {
         }
 
         topicName = findViewById(R.id.topic_name)
-        topicDescription = findViewById(R.id.topic_description)
+        topicDescriptionLong = findViewById(R.id.topic_description_long)
         questionCount = findViewById(R.id.question_count)
 
         val topicIndex = intent.getIntExtra("topicIndex", 0)
-        val topic = topics[topicIndex]
+        val topic = (application as QuizApp).topicRepository.getTopics()[topicIndex]
 
-        topicName.text = topic.name
-        topicDescription.text = topic.description
+        topicName.text = topic.title
+        topicDescriptionLong.text = topic.longDescription
         questionCount.text = "Total Questions: ${topic.questions.size}"
 
         findViewById<Button>(R.id.begin_button).setOnClickListener {

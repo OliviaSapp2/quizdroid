@@ -1,6 +1,5 @@
 package edu.uw.ischool.osapp2.quizdroid
 
-import Question
 import android.content.Intent
 import android.os.Bundle
 import android.view.View
@@ -12,7 +11,6 @@ import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
-import topics
 
 class QuestionActivity : AppCompatActivity() {
     private lateinit var questionText: TextView
@@ -36,7 +34,7 @@ class QuestionActivity : AppCompatActivity() {
 
         val topicIndex = intent.getIntExtra("topicIndex", 0)
         val questionIndex = intent.getIntExtra("questionIndex", 0)
-        val topic = topics[topicIndex]
+        val topic = (application as QuizApp).topicRepository.getTopics()[topicIndex]
         totalQuestions = topic.questions.size
 
         loadQuestion(topic.questions[questionIndex])

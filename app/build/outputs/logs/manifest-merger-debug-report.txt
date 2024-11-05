@@ -80,8 +80,6 @@ MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] /Users/oliv
 		ADDED from [androidx.core:core:1.13.1] /Users/oliviasapp/.gradle/caches/transforms-4/0af1391e302a7d8580d9dc7d719cb5b4/transformed/core-1.13.1/AndroidManifest.xml:28:18-86
 	android:supportsRtl
 		ADDED from /Users/oliviasapp/Documents/UWClasses/info448/quizdroid/app/src/main/AndroidManifest.xml:12:9-35
-	android:label
-		ADDED from /Users/oliviasapp/Documents/UWClasses/info448/quizdroid/app/src/main/AndroidManifest.xml:10:9-41
 	android:fullBackupContent
 		ADDED from /Users/oliviasapp/Documents/UWClasses/info448/quizdroid/app/src/main/AndroidManifest.xml:8:9-54
 	android:roundIcon
@@ -96,6 +94,8 @@ MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] /Users/oliv
 		ADDED from /Users/oliviasapp/Documents/UWClasses/info448/quizdroid/app/src/main/AndroidManifest.xml:13:9-47
 	android:dataExtractionRules
 		ADDED from /Users/oliviasapp/Documents/UWClasses/info448/quizdroid/app/src/main/AndroidManifest.xml:7:9-65
+	android:name
+		ADDED from /Users/oliviasapp/Documents/UWClasses/info448/quizdroid/app/src/main/AndroidManifest.xml:10:9-32
 activity#edu.uw.ischool.osapp2.quizdroid.AnswerActivity
 ADDED from /Users/oliviasapp/Documents/UWClasses/info448/quizdroid/app/src/main/AndroidManifest.xml:15:9-17:40
 	android:exported

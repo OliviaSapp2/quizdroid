@@ -1,14 +1,18 @@
 package edu.uw.ischool.osapp2.quizdroid
 
+import android.content.Context
 import android.content.Intent
 import android.os.Bundle
-import android.widget.ArrayAdapter
+import android.view.LayoutInflater
+import android.view.View
+import android.view.ViewGroup
+import android.widget.BaseAdapter
 import android.widget.ListView
+import android.widget.TextView
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
-import topics
 
 class MainActivity : AppCompatActivity() {
     private lateinit var topicListView: ListView
@@ -25,7 +29,8 @@ class MainActivity : AppCompatActivity() {
 
         topicListView = findViewById(R.id.topic_list)
 
-        val adapter = ArrayAdapter(this, android.R.layout.simple_list_item_1, topics.map { it.name })
+        val topics = (application as QuizApp).topicRepository.getTopics()
+        val adapter = TopicAdapter(this, topics)
         topicListView.adapter = adapter
 
         topicListView.setOnItemClickListener { _, _, position, _ ->
@@ -33,5 +38,26 @@ class MainActivity : AppCompatActivity() {
             intent.putExtra("topicIndex", position)
             startActivity(intent)
         }
+    }
+}
+
+//made a new version of the ArrayAdapter, to display two things in the list view
+class TopicAdapter(private val context: Context, private val topics: List<Topic>) : BaseAdapter() {
+
+    override fun getCount(): Int = topics.size
+    override fun getItem(position: Int): Topic = topics[position]
+    override fun getItemId(position: Int): Long = position.toLong()
+
+    override fun getView(position: Int, convertView: View?, parent: ViewGroup?): View {
+        val view = convertView ?: LayoutInflater.from(context).inflate(R.layout.activity_main, parent, false)
+
+        val titleTextView = view.findViewById<TextView>(R.id.title)
+        val descriptionTextView = view.findViewById<TextView>(R.id.topic_short_description)
+
+        val topic = getItem(position)
+        titleTextView.text = topic.title
+        descriptionTextView.text = topic.shortDescription
+
+        return view
     }
 }

@@ -8,12 +8,16 @@
         "source": "/Users/oliviasapp/.gradle/daemon/8.7/edu.uw.ischool.osapp2.quizdroid.app-main-33:/mipmap-hdpi/ic_launcher.webp"
     },
     {
+        "merged": "edu.uw.ischool.osapp2.quizdroid.app-debug-31:/layout_activity_topic_overview.xml.flat",
+        "source": "edu.uw.ischool.osapp2.quizdroid.app-main-33:/layout/activity_topic_overview.xml"
+    },
+    {
         "merged": "/Users/oliviasapp/.gradle/daemon/8.7/edu.uw.ischool.osapp2.quizdroid.app-debug-31:/layout_activity_question.xml.flat",
         "source": "/Users/oliviasapp/.gradle/daemon/8.7/edu.uw.ischool.osapp2.quizdroid.app-main-33:/layout/activity_question.xml"
     },
     {
-        "merged": "edu.uw.ischool.osapp2.quizdroid.app-debug-31:/layout_activity_question.xml.flat",
-        "source": "edu.uw.ischool.osapp2.quizdroid.app-main-33:/layout/activity_question.xml"
+        "merged": "edu.uw.ischool.osapp2.quizdroid.app-debug-31:/layout_activity_main.xml.flat",
+        "source": "edu.uw.ischool.osapp2.quizdroid.app-main-33:/layout/activity_main.xml"
     },
     {
         "merged": "/Users/oliviasapp/.gradle/daemon/8.7/edu.uw.ischool.osapp2.quizdroid.app-debug-31:/mipmap-anydpi_ic_launcher.xml.flat",

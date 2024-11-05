@@ -3571,9 +3571,10 @@ id title_template
 id toggle
 id top
 id topPanel
-id topic_description
+id topic_description_long
 id topic_list
 id topic_name
+id topic_short_description
 id touch_outside
 id transitionToEnd
 id transitionToStart
@@ -3840,6 +3841,7 @@ string abc_toolbar_collapse_description
 string androidx_startup
 string app_name
 string appbar_scrolling_view_behavior
+string begin
 string bottom_sheet_behavior
 string bottomsheet_action_collapse
 string bottomsheet_action_expand
@@ -3970,6 +3972,7 @@ string path_password_eye
 string path_password_eye_mask_strike_through
 string path_password_eye_mask_visible
 string path_password_strike_through
+string quiz_topics
 string search_menu_title
 string searchbar_scrolling_view_behavior
 string searchview_clear_text_content_description

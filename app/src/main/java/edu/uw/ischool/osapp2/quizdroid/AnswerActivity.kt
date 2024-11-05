@@ -1,6 +1,7 @@
 package edu.uw.ischool.osapp2.quizdroid
 
 import QuizScore
+import android.annotation.SuppressLint
 import android.content.Intent
 import android.os.Bundle
 import android.view.View
@@ -10,7 +11,6 @@ import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
-import topics
 
 class AnswerActivity : AppCompatActivity() {
     private lateinit var yourAnswer: TextView
@@ -19,6 +19,7 @@ class AnswerActivity : AppCompatActivity() {
     private lateinit var nextButton: Button
     private lateinit var finishButton: Button
 
+    @SuppressLint("SetTextI18n")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
@@ -38,6 +39,8 @@ class AnswerActivity : AppCompatActivity() {
         val questionIndex = intent.getIntExtra("questionIndex", 0)
         val selectedOptionIndex = intent.getIntExtra("selectedOptionIndex", -1)
         val correctAnswerIndex = intent.getIntExtra("correctAnswerIndex", -1)
+
+        val topics = (application as QuizApp).topicRepository.getTopics()
 
         val question = topics[topicIndex].questions[questionIndex]
         yourAnswer.text = "Your Answer: ${question.options[selectedOptionIndex]}"

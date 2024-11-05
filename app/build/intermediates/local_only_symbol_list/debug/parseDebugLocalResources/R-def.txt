@@ -15,9 +15,10 @@ id question_count
 id question_text
 id submit_button
 id title
-id topic_description
+id topic_description_long
 id topic_list
 id topic_name
+id topic_short_description
 id your_answer
 layout activity_answer
 layout activity_main
@@ -26,6 +27,8 @@ layout activity_topic_overview
 mipmap ic_launcher
 mipmap ic_launcher_round
 string app_name
+string begin
+string quiz_topics
 style Base.Theme.Quizdroid
 style Theme.Quizdroid
 xml backup_rules
