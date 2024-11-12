@@ -1,21 +1,9 @@
-An application that will allow users to take multiple-choice quizzes now we will refactor to use a domain model and an Application object
-note that a future version of this codebase will require permissions to be set; this can be done now or later, as you wish.
+An application that will allow users to take multiple-choice quizzes, now we will write the code to check the questions periodically, store the data, and allow for preferences.
 
-Tasks
-- Create a class called QuizApp extending android.app.Application and make sure it is referenced from the app manifest; override the onCreate() method to emit a message to the diagnostic log to ensure it is being loaded and run
+Refactor the TopicRepository to read a local JSON file (data/questions.json) to use as the source of the Topics and Questions.
 
-- Use the "Repository" pattern to create a TopicRepository interface; create one implementation that simply stores elements in memory from a hard-coded list initialized on startup.
+The application should provide a "Preferences" action bar item that brings up a "Preferences" activity containing the application's configurable settings: URL to use for question data, and how often to check for new downloads measured in minutes. If a download is currently under way, these settings should not take effect until the next download starts.
 
-- Create domain objects for Topic and Question
+keep in mind in the next part, you're going to download that JSON file, so make sure that your code to open the file is flexible enough to read from a different location on the device
 
-- a Question is question text, four answers, and an integer saying which of the four answers is correct, a Topic is a title, short description, long description, and a collection of Question objects
-
-- Provide a method or property on QuizApp for accessing the TopicRepository.
-
-- Refactor the activities in the application to use the TopicRepository.
-
-- On the topic list page, the title and the short description should come from the similar fields in the Topic object.
-
-- On the topic overview page, the title and long description should come from the similar fields in the Topic object. The Question object should be similarly easy to match up to the UI.
-
-
+putting the file into the "assets" folder of the Android Studio project is easy, but can't be overwritten by what's downloaded
